@@ -1,5 +1,7 @@
 import React from "react";
-import DeleteIcon from "./DeleteIcon";
+// import DeleteIcon from "./DeleteIcon";
+import DeleteIcon from "@material-ui/icons/Delete";
+
 function Note(props) {
   return (
     <div className="note">

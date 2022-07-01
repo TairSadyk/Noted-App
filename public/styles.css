@@ -92,7 +92,7 @@ form textarea {
   resize: none;
   outline: none;
 }
-form button {
+form .btn {
   position: absolute;
   color: white;
 
