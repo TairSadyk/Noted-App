@@ -1,3 +1,7 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+ */
+/* @import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,21 +11,27 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #eee;
+  background: #f6a89e;
   padding: 0 16px;
+  overflow-y: hidden;
 }
 
 header {
-  background-color: #f5ba13;
+  /* background-color: #f5ba13; */
   margin: auto -16px;
   padding: 16px 32px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); */
+  border-bottom: 4px solid #33322e;
 }
 
 header h1 {
-  color: #fff;
-  font-family: "McLaren", cursive;
-  font-weight: 200;
+  color: #33322e;
+  /* font-family: "McLaren", cursive; */
+  /* font-family: "Indie Flower", cursive; */
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  text-transform: uppercase;
 }
 
 footer {
@@ -29,7 +39,7 @@ footer {
   text-align: center;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;
+  height: 25px;
 }
 
 footer p {
@@ -37,13 +47,15 @@ footer p {
 }
 .note {
   position: relative;
-  background: #fff;
-  border-radius: 7px;
+  background: #f9f3e5;
+  border-radius: 25px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
   width: 240px;
   margin: 16px;
   float: left;
+  box-shadow: 10px 10px #33322e;
+  border: 2px solid #33322e;
 }
 .note h1 {
   font-size: 1.1em;
@@ -60,7 +72,7 @@ footer p {
   border: none;
   text-transform: uppercase;
   letter-spacing: -0.3px;
-  color: #f5ba13;
+  color: #8cd4cb;
   cursor: pointer;
   bottom: 5px;
   right: 7px;
@@ -77,32 +89,40 @@ form {
 
   width: 40%;
   margin: 40px auto 25px;
-  border-radius: 7.5px;
-  padding: 15px;
-  background-color: white;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
+  /* padding: 15px; */
+  background-color: #f9f3e5;
+  box-shadow: 10px 10px #33322e;
+  border: 2px solid #33322e;
 }
+
 form input,
 form textarea {
   border: none;
-  padding: 4px;
+  padding: 15px;
   font-family: inherit;
   font-size: 18px;
   width: 100%;
   resize: none;
   outline: none;
+  background-color: #f9f3e5;
+  border-radius: 25px;
+}
+form input {
+  border-bottom: 2px solid #33322e;
+  border-radius: 25px 25px 0 0;
 }
 form .btn {
   position: absolute;
-  color: white;
+  color: #33322e;
 
-  background-color: #f5ba13;
+  background-color: #8cd4cb;
   padding: 5px;
-  bottom: -18px;
-  right: 18px;
+  bottom: -24px;
+  right: -24px;
   width: 50px;
   height: 50px;
-  border: none;
+  border: 2.5px solid #33322e;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);

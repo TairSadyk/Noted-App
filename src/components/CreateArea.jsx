@@ -9,10 +9,12 @@ function CreateArea(props) {
   // const updateTitle = (e) => setTitle(e.target.value);
   // const updateContent = (e) => setContent(e.target.value);
   const [note, setNote] = useState({ title: "", content: "" });
+  const [inputInitiated, setInputInitiated] = useState(false);
   const handleChange = (e) => {
     const { value, name } = e.target;
     setNote({ ...note, [name]: value });
   };
+  const activateNote = () => setInputInitiated(true);
 
   return (
     //Implementing notes functionality using objects where title is a key and content is a value
@@ -31,20 +33,23 @@ function CreateArea(props) {
         setNote({ title: "", content: "" });
       }}
     >
-      <input
-        onChange={handleChange}
-        value={note.title}
-        name="title"
-        placeholder="Title"
-      />
+      {inputInitiated && (
+        <input
+          onChange={handleChange}
+          value={note.title}
+          name="title"
+          placeholder="Title"
+        />
+      )}
       <textarea
+        onClick={activateNote}
         onChange={handleChange}
         value={note.content}
         name="content"
-        rows="3"
+        rows={inputInitiated ? "3" : "1"}
         placeholder="take a a note..."
       />
-      <Zoom in={true}>
+      <Zoom in={inputInitiated}>
         <Fab className="btn" type="submit">
           <AddIcon />
         </Fab>
