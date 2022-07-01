@@ -1,12 +1,12 @@
 import React from "react";
-import Icon from "./Icon";
+import DeleteIcon from "./DeleteIcon";
 function Note(props) {
   return (
     <div className="note">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
-      <button>
-        <Icon />
+      <button onClick={() => props.delete(props.id)}>
+        <DeleteIcon />
       </button>
     </div>
   );
