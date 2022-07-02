@@ -34,13 +34,13 @@ import CreateArea from "./CreateArea";
 //   );
 // }
 
-function App() {
+function App(props) {
   const [notes, setNotes] = useState([]);
+  props.onLoad(notes);
   const addNote = (noteItem) => {
     setNotes([...notes, noteItem]);
   };
   const deleteNote = (id) => {
-    console.log("Note deletion initiated...");
     setNotes(notes.filter((_, i) => i !== id));
   };
   return (

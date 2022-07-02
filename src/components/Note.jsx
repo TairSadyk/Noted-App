@@ -1,5 +1,4 @@
 import React from "react";
-// import DeleteIcon from "./DeleteIcon";
 import DeleteIcon from "@material-ui/icons/Delete";
 
 function Note(props) {
@@ -23,7 +22,7 @@ function Note(props) {
       <h1>{props.title}</h1>
       <p>{props.content}</p>
       <p className="date">
-        {months[now.getMonth()]} {now.getDate()}, {now.toLocaleTimeString()}
+        {months[now.getMonth()]} {now.getDate()} | {now.toLocaleTimeString()}
       </p>
       <button onClick={() => props.delete(props.id)}>
         <DeleteIcon />
