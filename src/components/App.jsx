@@ -3,6 +3,7 @@ import Header from "./Header";
 import Note from "./Note";
 import Footer from "./Footer";
 import CreateArea from "./CreateArea";
+import { useEffect } from "react";
 
 //Implementing notes functionality using objects where title is a key and content is a value
 // function App() {
@@ -34,15 +35,24 @@ import CreateArea from "./CreateArea";
 //   );
 // }
 
-function App(props) {
+function App() {
   const [notes, setNotes] = useState([]);
-  props.onLoad(notes);
+  useEffect(() => {
+    const existingNotes = localStorage.getItem("notes");
+    setNotes(existingNotes ? JSON.parse(existingNotes) : []);
+  }, []);
   const addNote = (noteItem) => {
     setNotes([...notes, noteItem]);
+    localStorage.setItem("notes", JSON.stringify([...notes, noteItem]));
   };
   const deleteNote = (id) => {
     setNotes(notes.filter((_, i) => i !== id));
+    localStorage.setItem(
+      "notes",
+      JSON.stringify(notes.filter((_, i) => i !== id))
+    );
   };
+
   return (
     <div>
       <Header />
